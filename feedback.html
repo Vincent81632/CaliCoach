@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback</title>
+    <link rel="stylesheet" href="styles_index.css">
+    <link rel="stylesheet" href="styles_feedback.css">
+</head>
+
+<body>
+    <div id="menü" class="menü">
+        <button id="button_menü">
+            <img src="menu_icon.svg" alt="menu bar">
+        </button>
+        <div id="Links">
+            <a class="link" id="link_home" href="index.html">Home</a>
+            <a class="link" id="link_feedback" href="feedback.html">Feedback</a>
+        </div>
+        <button id="button-Sign-up" onclick="window.location.href = 'sign-up.html'">Sign-up</button>
+    </div>
+    <h1 style="font-size: 8vh; position: absolute; top: 10vh;"><span style="color: #4a6cf7;">Feed</span><span
+            style="color: #ff3f5e;">back</span></h1>
+    <h3 style="position: absolute; top: 30vh;">Aus datenschutzrechtlichen Gründen verlinken wir hier auf eine Google
+        Forms Umfrage.</h3>
+        <button id="button_to_feedback" onclick="window.location.href = 'https://forms.gle/bEt7qWB1HZ22F4128'">Zur Umfrage</button>
+        <script type="module" src="script.js" defer></script>
+        <script src="feedback.js" defer></script>
+</body>
+
+</html>

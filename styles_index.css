@@ -1,0 +1,276 @@
+:root {
+  --primär: #4a6cf7;
+  --sekundär: #ff3f5e;
+  --akzentfarbe: #ff7043;
+  --gradient-start: #8a2be2;
+  --gradient-end: #1e1e9c;
+  --light-mode-Text: #2c2c2c;
+  --dark-mode-Text: #ffffff;
+  --light-mode-hintergrund: #f5f5f5;
+  --menü: #e2e2e2;
+  --inaktiv: #afafaf;
+}
+
+
+body,
+html {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--light-mode-hintergrund);
+}
+
+
+.Subline {
+  margin-bottom: 10vh;
+  color: #8b8b8b;
+  filter: brightness(1.5);
+}
+
+.asking-for-survay {
+  position: absolute;
+  top: 60vh;
+  color: var(--light-mode-Text);
+  font-size: 2.5vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.span_asking_for_survay {
+  color: var(--akzentfarbe);
+  font-size: 3.5vh;
+}
+
+
+.menü {
+  width: 100%;
+  height: 10vh;
+  background-color: var(--menü);
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#button-Sign-up {
+  border: none;
+  background-color: var(--akzentfarbe);
+  border-radius: 5px;
+  height: 5vh;
+  color: #ffffff;
+  font-size: 3vh;
+  font-weight: 700;
+  margin-right: 2%;
+}
+
+#button-Sign-up.inaktiv {
+  background-color: var(--inaktiv);
+}
+
+#button_menü {
+  display: none;
+  aspect-ratio: 1 / 1;
+  height: 60%;
+  margin-left: 5%;
+  place-items: center;
+}
+
+#Links {
+  width: 16%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 2%;
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  color: var(--primär);
+  font-size: 3vh;
+  font-weight: 700;
+}
+
+@keyframes einfliegen {
+  0% {
+    left: -40vw;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+
+
+
+#link_home {
+  color: var(--sekundär);
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--sekundär);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+.hero-img {
+  position: absolute;
+  top: 10vh;
+  height: 40vh;
+}
+
+.button-to-survay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sekundär);
+  border-radius: 1vh;
+  border: none;
+  position: absolute;
+  top: 70vh;
+  height: 7vh;
+  color: var(--dark-mode-Text);
+  font-size: 5vh;
+}
+
+#button_plan_fortsetzen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primär);
+  border-radius: 1vh;
+  border: none;
+  position: absolute;
+  top: 80vh;
+  height: 7vh;
+
+  color: var(--dark-mode-Text);
+  font-size: 5vh;
+}
+
+.div_plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 16vh;
+  left: 7vw;
+  height: 40vh;
+  width: 22vw;
+  background-color: #e5e5e5;
+  z-index: 1000;
+  border-radius: 3vh;
+  box-shadow: 0 4px 12px #afafaf;
+  overflow-y: auto;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+  container-type: inline-size;
+  container-name: div_plan;
+
+}
+
+.div_plan::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+.button_plan_key {
+  background-color: var(--primär);
+  font-size: 4vh;
+  height: 5vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark-mode-Text);
+  border-radius: 5vh;
+  border: none;
+  margin: 2.5vh;
+  z-index: 10000;
+}
+
+.plan_value {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .div_plan {
+    height: 7vh;
+    width: 50vw;
+    top: 90vh;
+    left: 25vw;
+    overflow: hidden;
+  }
+    .button_plan_key {
+    display: none;
+  }
+
+  .asking-for-survay {
+    top: 55vh;
+  }
+
+  .button-to-survay {
+    top: 72vh;
+    font-size: 4vh;
+    height: 6vh;
+  }
+
+  #button_plan_fortsetzen {
+    font-size: 4vh;
+    height: 6vh;
+    top: 82vh;
+  }
+
+  #Links {
+    position: absolute;
+    top: 9.9vh;
+    display: none;
+    flex-direction: column;
+    height: 90dvh;
+    width: 40vw;
+    background-color: var(--menü);
+    margin: 0;
+    justify-content: start;
+    align-items: flex-start;
+  }
+
+  .link {
+    margin-left: 5%;
+  }
+
+  #Links.aktiv {
+    display: flex;
+    animation: einfliegen 0.2s ease-out;
+  }
+
+  #button_menü {
+    display: grid;
+  }
+}
+
+
+

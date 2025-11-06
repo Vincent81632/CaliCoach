@@ -1,0 +1,128 @@
+:root {
+  --primär: #4a6cf7;
+  --sekundär: #ff3f5e;
+  --akzentfarbe: #ff6b00;
+  --gradient-start: #8a2be2;
+  --gradient-end: #1e1e9c;
+  --light-mode-Text: #2c2c2c;
+  --dark-mode-Text: #ffffff;
+  --light-mode-hintergrund: #f5f5f5;
+  --menü: #e2e2e2;
+  --inaktiv: #afafaf;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--light-mode-hintergrund);
+}
+
+h1 {
+  color: var(--primär);
+  position: absolute;
+  top: 0;
+}
+
+p {
+  font-size: 3vh;
+  position: absolute;
+  top: 30vh;
+}
+
+#input_anpassungen {
+  position: absolute;
+  top: 50vh;
+  width: 50%;
+  height: 5vh;
+  text-align: center;
+  border-radius: 10vh;
+  border: 2px solid var(--light-mode-Text);
+}
+
+
+@keyframes hover {
+  from {
+    transform: scale(1);
+    box-shadow: 0 0px 0px rgb(182, 182, 182);
+    background: linear-gradient(to right, var(--sekundär), var(--sekundär));
+  }
+  to {
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgb(182, 182, 182);
+    background: linear-gradient(to right, var(--sekundär), var(--akzentfarbe));
+  }
+}
+#button_fortsetzen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sekundär);
+  border-radius: 10px;
+  border: none;
+  position: absolute;
+  top: 80vh;
+  height: 7vh;
+  box-shadow: 0 0px 0px rgb(182, 182, 182);
+  color: var(--dark-mode-Text);
+  font-size: 5vh;
+
+}
+
+#button_fortsetzen:hover {
+  animation: hover 0.2s ease-out forwards;
+}
+
+.loader {
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--light-mode-hintergrund);
+  gap: 10px;
+  z-index: 2000;
+}
+
+.loader h3 {
+  position: absolute;
+  top: 40vh;
+}
+
+.loader span {
+  width: 15px;
+  height: 15px;
+  background-color: #ff6b6b;
+  /* CaliCoach Rot */
+  border-radius: 50%;
+  animation: pulse 0.6s infinite ease-in-out;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}

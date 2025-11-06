@@ -1,0 +1,13 @@
+#button_to_feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sekundär);
+  border-radius: 10px;
+  border: none;
+  position: absolute;
+  top: 40vh;
+  height: 7vh;
+  color: var(--dark-mode-Text);
+  font-size: 5vh;
+}

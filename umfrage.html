@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Umfrage</title>
+    <link rel="stylesheet" href="styles_umfrage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <h1 class="h1_Fragebogen">Fragebogen</h1>
+    <h3 class="h3_Fragebogen">Wir verwenden die angegebenen Daten ausschliesslich, um dir einen personalisierten
+        Trainingsplan zu generieren.</h3>
+    <div class="Fragebogen">
+
+        <div class="div_Workouts_weak">
+            <p class="Text_Workouts_weak">Wie oft möchtest du pro Woche trainieren?</p>
+            <input id="Workouts_weak" type="number" placeholder="Gib eine Zahl zwischen 1 & 7 ein.">
+        </div>
+        <div class="div_duration_Workout">
+            <p class="Text_duration_Workout">Wie lange möchtest du pro Einheit trainieren?</p>
+            <input id="duration_Workout" type="number" placeholder="Gib eine Zahl zwischen 10 & 90 ein">
+        </div>
+        <div class="div_Level">
+            <p class="Text_Level">Wie fortgeschritten bist du?</p>
+            <input id="Level" type="number"
+                placeholder="Gib eine Zahl zwischen 1 & 20 ein, wobei 1 absoluter Anfänger & 20 absoluter Profi ist.">
+        </div>
+        <div class="div_Equipment">
+            <p class="Text_Equipment">Was hast du alles an Equipment?</p>
+            <button class="button_equipment">Klimmzugstange</button>
+            <button class="button_equipment">Parallettes</button>
+            <button class="button_equipment">Gymnastikringe</button>
+            <button class="button_equipment">Dip-Barren</button>
+            <button class="button_equipment">Sprossenwand</button>
+            <button class="button_equipment">Widerstandsbänder</button>
+            <button class="button_equipment">Gewichtsweste</button>
+            <button class="button_equipment">Ankle Weights</button>
+            <button class="button_equipment">Trainingsmatte</button>
+        </div>
+        <div class="div_Zielmuskeln">
+            <p class="Text_Zielmuskeln">Welche Muskeln willst du trainieren?</p>
+            <button class="button_muskeln">Brust</button>
+            <button class="button_muskeln">Schultern</button>
+            <button class="button_muskeln">Trizeps</button>
+            <button class="button_muskeln">Bizeps</button>
+            <button class="button_muskeln">Latissimus</button>
+            <button class="button_muskeln">Rücken</button>
+            <button class="button_muskeln">Trapezmuskeln</button>
+            <button class="button_muskeln">Six-pack</button>
+            <button class="button_muskeln">Schräge Bauchmuskeln</button>
+            <button class="button_muskeln">Gluten</button>
+            <button class="button_muskeln">Quadrizeps</button>
+            <button class="button_muskeln">Hamstrings</button>
+            <button class="button_muskeln">Waden</button>
+        </div>
+        <div class="div_Ziele">
+            <p class="Text_Ziele">Was hast du für persönliche Ziele?</p>
+            <button class="button_Ziele">Muscle-up</button>
+            <button class="button_Ziele">Handstand</button>
+            <button class="button_Ziele">Planch-push-up</button>
+            <button class="button_Ziele">L-sit</button>
+            <button class="button_Ziele">One-arm pull-up</button>
+            <button class="button_Ziele">Handstand push-up</button>
+            <button class="button_Ziele">Front Lever</button>
+            <button class="button_Ziele">Back Lever</button>
+            <button class="button_Ziele">Planche</button>
+            <button class="button_Ziele">One Arm Handstand</button>
+            <button class="button_Ziele">Human-Flag</button>
+        </div>
+    </div>
+    <div class="div_button">
+        <button id="button">Calisthenics Plan generieren</button>
+    </div>
+
+    <div class="loader">
+        <h3>Dies könnte ein paar Sekunden dauern...</h3>      
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <script type="module" src="backup.js"></script>
+</body>
+
+</html>

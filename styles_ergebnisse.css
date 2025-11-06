@@ -1,0 +1,113 @@
+:root {
+  --primär: #4a6cf7;
+  --sekundär: #ff3f5e;
+  --akzentfarbe: #ff6b00;
+  --gradient-start: #8a2be2;
+  --gradient-end: #1e1e9c;
+  --light-mode-Text: #2c2c2c;
+  --dark-mode-Text: #ffffff;
+  --light-mode-hintergrund: #f5f5f5;
+  --menü: #e2e2e2;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  background-color: var(--light-mode-hintergrund);
+}
+
+.h1 {
+    position: absolute;
+    top: 5vh;
+    color: var(--sekundär);
+    text-align: center;
+}
+
+#Ergebnisse {
+    position: absolute;
+    top: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.button_key {
+    background-color: var(--primär);
+    font-size: 4vh;
+    height: 5vh;
+    width: 20%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-mode-Text);
+    border-radius: 5vh;
+    border: none;
+    margin: 2.5vh;
+}
+.value {
+    display: none;
+}
+.h3_feedback {
+  position: absolute;
+  text-align: center;
+  top: 18vh;
+}
+
+#button_to_feedback {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--sekundär);
+  border-radius: 10px;
+  border: none;
+  position: absolute;
+  top: 28vh;
+  height: 7vh;
+  color: var(--dark-mode-Text);
+  font-size: 5vh;
+}
+
+.link {
+  position: absolute;
+  text-decoration: none;
+  display: inline-block;
+  color: var(--primär);
+  font-size: 3.5vh;
+  font-weight: 700;
+  top: 39vh;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--sekundär);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 1000px) {
+  #button_to_feedback {
+    width: 60vw;
+    top: 31vh;
+  }
+  .button_key {
+    width: 35vw;
+  }
+}

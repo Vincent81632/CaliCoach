@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calisthenics.ai</title>
+    <link rel="stylesheet" href="styles_index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js"></script>
+</head>
+
+<body>
+    <h3 class="asking-for-survay">Erhalte einen personalisierten <span class="span_asking_for_survay">KI</span>
+        Calisthenics Trainingsplan, indem du diesen Fragenbogen
+        ausfüllst.</h3>
+    <button class="button-to-survay" onclick="window.location.href='Umfrage.html'">Zum Fragebogen</button>
+    <button id="button_plan_fortsetzen">Plan fortsetzen</button>
+
+    <div id="menü" class="menü">
+        <button id="button_menü">
+            <img src="menu_icon.svg" alt="menu bar">
+        </button>
+        <div id="Links">
+            <a class="link" id="link_home" href="index.html">Home</a>
+            <a class="link" id="link_feedback" href="feedback.html">Feedback</a>
+        </div>
+        <button id="button-Sign-up" onclick="window.location.href = 'sign-up.html'">Sign-up</button>
+    </div>
+    <img class="hero-img" src="Cover.png" alt="logo">
+    
+    <script  src="script.js" defer type="module"></script>
+
+</body>
+
+</html>
