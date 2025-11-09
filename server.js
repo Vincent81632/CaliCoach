@@ -10,7 +10,7 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY, // <-- nie direkt einfügen!
 });
 
-app.post("/api/generate-plan", async (req, res) => {
+app.post("/", async (req, res) => {
   try {
     const { userProfile } = req.body;
 

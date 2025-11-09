@@ -1,5 +1,5 @@
 async function getTrainingPlan(userProfile) {
-  const res = await fetch("https://calicoach-dgva.onrender.com/api/generate-plan", {
+  const res = await fetch("https://calicoach-dgva.onrender.com", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ userProfile }),
