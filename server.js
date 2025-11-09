@@ -16,7 +16,7 @@ app.post("/api/generate-plan", async (req, res) => {
 
     const response = await openai.responses.create({
       model: "gpt-5",
-      input: `Erstelle einen Calisthenics-Trainingsplan für: ${userProfile}`,
+      input: `${userProfile}`,
     });
 
     res.json({ output: response.output[0].content[0].text });
@@ -26,6 +26,6 @@ app.post("/api/generate-plan", async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT 
 app.listen(PORT, () => console.log(`Server läuft auf Port ${PORT}`));
 

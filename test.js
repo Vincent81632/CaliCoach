@@ -5,5 +5,7 @@ async function getTrainingPlan(userProfile) {
     body: JSON.stringify({ userProfile }),
   });
   const data = await res.json();
-  console.log("Plan:", data.output);
+  console.log("Antwort:", data.output);
 }
+
+getTrainingPlan("Was kannst du alles?")
